@@ -1,90 +1,110 @@
 package com.example.traficmanager.model;
 
+import java.util.ArrayList;
+import java.util.Set;
+
 public class Airport {
 	private String nom;
-	private String localisation;
-	private int nbrPistes;
-	private int nbrPlaceSol;
-	private int DelaiAttSol;
-	private int temppistes;
-	private int detaiAnticollision;
-	private int tempdecollage;
-	private int dureeBoucleVol;
-	private double distance;
-	public Airport(String nom, String localisation, int nbrPistes, int nbrPlaceSol, int delaiAttSol, int temppistes,
-			int detaiAnticollision, int tempdecollage, int dureeBoucleVol, double distance) {
-		super();
+	private String Location;
+	private double Latitude;
+	private double Longetude;
+	private int nb_pistes;
+	private int nb_station;
+	private ArrayList<Piste> pistes;
+	private ArrayList<Station> stations;
+	private ArrayList<AirPlane> airplanes;
+	private double duree_boucle;
+
+	public Airport(String nom, String location, double latitude, double longetude, int nb_pistes, int nb_station, ArrayList<Piste> pistes, ArrayList<Station> stations, ArrayList<AirPlane> airplanes, double duree_boucle) {
 		this.nom = nom;
-		this.localisation = localisation;
-		this.nbrPistes = nbrPistes;
-		this.nbrPlaceSol = nbrPlaceSol;
-		DelaiAttSol = delaiAttSol;
-		this.temppistes = temppistes;
-		this.detaiAnticollision = detaiAnticollision;
-		this.tempdecollage = tempdecollage;
-		this.dureeBoucleVol = dureeBoucleVol;
-		this.distance = distance;
+		Location = location;
+		Latitude = latitude;
+		Longetude = longetude;
+		this.nb_pistes = nb_pistes;
+		this.nb_station = nb_station;
+		this.pistes = pistes;
+		this.stations = stations;
+		this.airplanes = airplanes;
+		this.duree_boucle = duree_boucle;
 	}
-	public String getNom() {
-		return nom;
-	}
+
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
-	public String getLocalisation() {
-		return localisation;
+
+	public void setLocation(String location) {
+		Location = location;
 	}
-	public void setLocalisation(String localisation) {
-		this.localisation = localisation;
+
+	public void setLatitude(double latitude) {
+		Latitude = latitude;
 	}
-	public int getNbrPistes() {
-		return nbrPistes;
+
+	public void setLongetude(double longetude) {
+		Longetude = longetude;
 	}
-	public void setNbrPistes(int nbrPistes) {
-		this.nbrPistes = nbrPistes;
+
+	public void setNb_pistes(int nb_pistes) {
+		this.nb_pistes = nb_pistes;
 	}
-	public int getNbrPlaceSol() {
-		return nbrPlaceSol;
+
+	public void setNb_station(int nb_station) {
+		this.nb_station = nb_station;
 	}
-	public void setNbrPlaceSol(int nbrPlaceSol) {
-		this.nbrPlaceSol = nbrPlaceSol;
+
+	public void setPistes(ArrayList<Piste> pistes) {
+		this.pistes = pistes;
 	}
-	public int getDelaiAttSol() {
-		return DelaiAttSol;
+
+	public void setStations(ArrayList<Station> stations) {
+		this.stations = stations;
 	}
-	public void setDelaiAttSol(int delaiAttSol) {
-		DelaiAttSol = delaiAttSol;
+
+	public void setAirplanes(ArrayList<AirPlane> airplanes) {
+		this.airplanes = airplanes;
 	}
-	public int getTemppistes() {
-		return temppistes;
+
+	public void setDuree_boucle(double duree_boucle) {
+		this.duree_boucle = duree_boucle;
 	}
-	public void setTemppistes(int temppistes) {
-		this.temppistes = temppistes;
+
+	public String getNom() {
+		return nom;
 	}
-	public int getDetaiAnticollision() {
-		return detaiAnticollision;
+
+	public String getLocation() {
+		return Location;
 	}
-	public void setDetaiAnticollision(int detaiAnticollision) {
-		this.detaiAnticollision = detaiAnticollision;
+
+	public double getLatitude() {
+		return Latitude;
 	}
-	public int getTempdecollage() {
-		return tempdecollage;
+
+	public double getLongetude() {
+		return Longetude;
 	}
-	public void setTempdecollage(int tempdecollage) {
-		this.tempdecollage = tempdecollage;
+
+	public int getNb_pistes() {
+		return nb_pistes;
 	}
-	public int getDureeBoucleVol() {
-		return dureeBoucleVol;
+
+	public int getNb_station() {
+		return nb_station;
 	}
-	public void setDureeBoucleVol(int dureeBoucleVol) {
-		this.dureeBoucleVol = dureeBoucleVol;
+
+	public ArrayList<Piste> getPistes() {
+		return pistes;
 	}
-	public double getDistance() {
-		return distance;
+
+	public ArrayList<Station> getStations() {
+		return stations;
 	}
-	public void setDistance(double distance) {
-		this.distance = distance;
+
+	public ArrayList<AirPlane> getAirplanes() {
+		return airplanes;
 	}
-	
-	
+
+	public double getDuree_boucle() {
+		return duree_boucle;
+	}
 }
